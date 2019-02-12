@@ -114,7 +114,7 @@ let choice: Fruit = Fruit.kiwi
 choice.eat()
 */
 
-enum TrainType {
+/*enum TrainType {
     case TGV
     case intercity
     case TER
@@ -138,7 +138,13 @@ class Station {
     init (name: String, trains: [Train]) {
         self.trains = trains
         self.name = name
-        print("Welcome to \(name) station")
+        print("Welcome to \(name) station")    }
+    
+    func printTrains() {
+        print("----------- TRAINS LIST -----------")
+        for train in trains {
+            print("Train \(train.type) n°\(train.idNumber)")
+        }
     }
     
     func addTrain(train: Train) {
@@ -148,22 +154,120 @@ class Station {
     }
     
     func removeTrain(idNumber: Int) {
-        var leavingTrain: Train
-        var found: Bool = false
-        
-        for t in trains {
-            if t.idNumber == idNumber {
-                leavingTrain = t
-                found = true
-            }
-        }
-        if !found {
-            print("We are unable to find the train number \(idNumber)")
-        } else {
+        if let leavingTrain = trains.first(where: { $0.idNumber == idNumber }) {
             print("Ladies and Gentleman, the train \(leavingTrain.type) number \(leavingTrain.idNumber) is leaving, please mind the doors closing.")
-            
+            self.trains = self.trains.filter{$0.idNumber != idNumber}
+        } else {
+            print("We are unable to find the train number \(idNumber)")
         }
+        // or use for and enumerated()
     }
 }
 
+let trainNeuf: Train = Train(type: TrainType.TGV, idNumber: 2638)
+let trainPassable: Train = Train(type: TrainType.intercity, idNumber: 65446)
+let trainToutMoche: Train = Train(type: TrainType.TER, idNumber: 9999)
+let trainAncien: Train = Train(type: TrainType.unknown, idNumber: 321654)
 
+let parisMarseille: Station = Station(name: "Paris - Marseille", trains: [trainNeuf,trainPassable])
+
+parisMarseille.addTrain(train: trainToutMoche)
+parisMarseille.addTrain(train: trainAncien)
+parisMarseille.printTrains()
+
+parisMarseille.removeTrain(idNumber: 2638)
+parisMarseille.printTrains()*/
+/*
+func method(value: Int?) {
+    guard let check: Int = value else {
+        print("This is a nil value.")
+        return
+    }
+    print("My value is worth \(value)")
+}
+
+var value: Int? = nil
+method(value: value)
+
+value = 50
+method(value: value)
+*/
+/*
+protocol Eatable {
+    func eat()
+}
+
+class Banana: Eatable {
+    init() {  }
+    func eat() {
+        print("I hate Banana")
+    }
+}
+class Pizza: Eatable {
+    func eat() {
+        print("I love Pizza")
+    }
+}
+class Burger: Eatable {
+    func eat() {
+        print("I like Burger")
+    }
+}
+
+let banana: Banana = Banana()
+let pizza: Pizza = Pizza()
+let burger: Burger = Burger()
+let food: [Eatable] = [banana,pizza,burger]
+
+for f in food {
+    f.eat()
+}*/
+
+protocol RingDelegate {
+    func possess()
+    func lose()
+    func getDestroyed()
+}
+
+class TheOneRing {
+    let delegate: RingDelegate?
+    
+    func changeOwner(ringDelegate: RingDelegate) {
+        currentOwner.lose()
+        newOwner.possess()
+    }
+}
+
+class Sauron: RingDelegate {
+    func possess() {
+        print("- Sauron: THE MIDDLE EARTH WILL BE MIIIIINE !!")
+    }
+    
+    func lose() {
+        print("- Sauron: THIS IS NOT THE END, THERE'S NOWHERE YOU'LL BE SAFE")
+    }
+    
+    func getDestroyed() {
+        print("- Sauron: AAAAAAAAAAAAAAAAAARGGGGGH...BOOM")
+    }
+}
+
+class MiddleEarth {
+    let sauron: Sauron
+    var ring: TheOneRing?
+    guard let theonering: TheOneRing = ring else { return }
+    
+    init(sauron: Sauron) {
+        self.sauron = sauron
+    }
+    
+    func createTheOneRing() {
+        print("- In the depth of Mount Doom, Sauron created The One Ring of power...")
+    }
+    
+    theonering.changeOwner(ringdelegate: sauron)
+}
+
+let sauron: Sauron = Sauron()
+let middleearth: MiddleEarth = MiddleEarth(sauron: sauron)
+middleearth.createTheOneRing()
