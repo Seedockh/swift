@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62C973C022927DE8009A4EDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C973BF22927DE8009A4EDF /* AppDelegate.swift */; };
+		62C973C522927DE8009A4EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62C973C322927DE8009A4EDF /* Main.storyboard */; };
+		62C973C722927DEA009A4EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62C973C622927DEA009A4EDF /* Assets.xcassets */; };
+		62C973CA22927DEA009A4EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62C973C822927DEA009A4EDF /* LaunchScreen.storyboard */; };
+		62C973D222928103009A4EDF /* HousesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C973D122928103009A4EDF /* HousesViewController.swift */; };
+		62C973D42292813E009A4EDF /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C973D32292813E009A4EDF /* CharactersViewController.swift */; };
+		62C973D6229284D4009A4EDF /* HouseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C973D5229284D4009A4EDF /* HouseViewCell.swift */; };
+		62C973D822928543009A4EDF /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C973D722928543009A4EDF /* House.swift */; };
+		62C973DC2292A99E009A4EDF /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C973DB2292A99E009A4EDF /* RequestManager.swift */; };
+		62C973DE2292AB1D009A4EDF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 62C973DD2292AB1D009A4EDF /* Podfile */; };
+		62C973E22292DF06009A4EDF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C973E12292DF06009A4EDF /* Character.swift */; };
+		6FCC722D674FC0EF680B8FC8 /* Pods_HousesOfThrones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0011EF94BD87AB8D4FA1B210 /* Pods_HousesOfThrones.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0011EF94BD87AB8D4FA1B210 /* Pods_HousesOfThrones.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HousesOfThrones.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62C973BC22927DE8009A4EDF /* HousesOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62C973BF22927DE8009A4EDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		62C973C422927DE8009A4EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62C973C622927DEA009A4EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62C973C922927DEA009A4EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		62C973CB22927DEA009A4EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62C973D122928103009A4EDF /* HousesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewController.swift; sourceTree = "<group>"; };
+		62C973D32292813E009A4EDF /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		62C973D5229284D4009A4EDF /* HouseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewCell.swift; sourceTree = "<group>"; };
+		62C973D722928543009A4EDF /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		62C973DB2292A99E009A4EDF /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		62C973DD2292AB1D009A4EDF /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		62C973E12292DF06009A4EDF /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		D3A59BF683B4F6BA8CBCA4CF /* Pods-HousesOfThrones.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HousesOfThrones.debug.xcconfig"; path = "Target Support Files/Pods-HousesOfThrones/Pods-HousesOfThrones.debug.xcconfig"; sourceTree = "<group>"; };
+		E976C21761D1BD5B74EAF301 /* Pods-HousesOfThrones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HousesOfThrones.release.xcconfig"; path = "Target Support Files/Pods-HousesOfThrones/Pods-HousesOfThrones.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62C973B922927DE8009A4EDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FCC722D674FC0EF680B8FC8 /* Pods_HousesOfThrones.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62C973B322927DE8009A4EDF = {
+			isa = PBXGroup;
+			children = (
+				62C973BE22927DE8009A4EDF /* HousesOfThrones */,
+				62C973BD22927DE8009A4EDF /* Products */,
+				764DCC13966637B0E77F1099 /* Pods */,
+				8682D966A8213A6BCA82FECA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		62C973BD22927DE8009A4EDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62C973BC22927DE8009A4EDF /* HousesOfThrones.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62C973BE22927DE8009A4EDF /* HousesOfThrones */ = {
+			isa = PBXGroup;
+			children = (
+				62C973BF22927DE8009A4EDF /* AppDelegate.swift */,
+				62C973C322927DE8009A4EDF /* Main.storyboard */,
+				62C973D122928103009A4EDF /* HousesViewController.swift */,
+				62C973D5229284D4009A4EDF /* HouseViewCell.swift */,
+				62C973D722928543009A4EDF /* House.swift */,
+				62C973C622927DEA009A4EDF /* Assets.xcassets */,
+				62C973C822927DEA009A4EDF /* LaunchScreen.storyboard */,
+				62C973CB22927DEA009A4EDF /* Info.plist */,
+				62C973D32292813E009A4EDF /* CharactersViewController.swift */,
+				62C973E12292DF06009A4EDF /* Character.swift */,
+				62C973DB2292A99E009A4EDF /* RequestManager.swift */,
+				62C973DD2292AB1D009A4EDF /* Podfile */,
+			);
+			path = HousesOfThrones;
+			sourceTree = "<group>";
+		};
+		764DCC13966637B0E77F1099 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3A59BF683B4F6BA8CBCA4CF /* Pods-HousesOfThrones.debug.xcconfig */,
+				E976C21761D1BD5B74EAF301 /* Pods-HousesOfThrones.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8682D966A8213A6BCA82FECA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0011EF94BD87AB8D4FA1B210 /* Pods_HousesOfThrones.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62C973BB22927DE8009A4EDF /* HousesOfThrones */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62C973CE22927DEA009A4EDF /* Build configuration list for PBXNativeTarget "HousesOfThrones" */;
+			buildPhases = (
+				6D328E25D3C4F39E67877ACA /* [CP] Check Pods Manifest.lock */,
+				62C973B822927DE8009A4EDF /* Sources */,
+				62C973B922927DE8009A4EDF /* Frameworks */,
+				62C973BA22927DE8009A4EDF /* Resources */,
+				CF6A094064B602746BA928B9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HousesOfThrones;
+			productName = HousesOfThrones;
+			productReference = 62C973BC22927DE8009A4EDF /* HousesOfThrones.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62C973B422927DE8009A4EDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = efrei;
+				TargetAttributes = {
+					62C973BB22927DE8009A4EDF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 62C973B722927DE8009A4EDF /* Build configuration list for PBXProject "HousesOfThrones" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62C973B322927DE8009A4EDF;
+			productRefGroup = 62C973BD22927DE8009A4EDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62C973BB22927DE8009A4EDF /* HousesOfThrones */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62C973BA22927DE8009A4EDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62C973CA22927DEA009A4EDF /* LaunchScreen.storyboard in Resources */,
+				62C973C722927DEA009A4EDF /* Assets.xcassets in Resources */,
+				62C973DE2292AB1D009A4EDF /* Podfile in Resources */,
+				62C973C522927DE8009A4EDF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D328E25D3C4F39E67877ACA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HousesOfThrones-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF6A094064B602746BA928B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HousesOfThrones/Pods-HousesOfThrones-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HousesOfThrones/Pods-HousesOfThrones-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62C973B822927DE8009A4EDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62C973D222928103009A4EDF /* HousesViewController.swift in Sources */,
+				62C973D6229284D4009A4EDF /* HouseViewCell.swift in Sources */,
+				62C973E22292DF06009A4EDF /* Character.swift in Sources */,
+				62C973C022927DE8009A4EDF /* AppDelegate.swift in Sources */,
+				62C973DC2292A99E009A4EDF /* RequestManager.swift in Sources */,
+				62C973D822928543009A4EDF /* House.swift in Sources */,
+				62C973D42292813E009A4EDF /* CharactersViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		62C973C322927DE8009A4EDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62C973C422927DE8009A4EDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		62C973C822927DEA009A4EDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62C973C922927DEA009A4EDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62C973CC22927DEA009A4EDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		62C973CD22927DEA009A4EDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62C973CF22927DEA009A4EDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A59BF683B4F6BA8CBCA4CF /* Pods-HousesOfThrones.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HousesOfThrones/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = peter.HousesOfThrones;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62C973D022927DEA009A4EDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E976C21761D1BD5B74EAF301 /* Pods-HousesOfThrones.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HousesOfThrones/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = peter.HousesOfThrones;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62C973B722927DE8009A4EDF /* Build configuration list for PBXProject "HousesOfThrones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62C973CC22927DEA009A4EDF /* Debug */,
+				62C973CD22927DEA009A4EDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62C973CE22927DEA009A4EDF /* Build configuration list for PBXNativeTarget "HousesOfThrones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62C973CF22927DEA009A4EDF /* Debug */,
+				62C973D022927DEA009A4EDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62C973B422927DE8009A4EDF /* Project object */;
+}

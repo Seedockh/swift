@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.8.2)
+  - IQKeyboardManager (6.2.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - IQKeyboardManager
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - IQKeyboardManager
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
+
+PODFILE CHECKSUM: 3d71f96926ced847d1548ccc9c170b6c55389ddc
+
+COCOAPODS: 1.6.1
