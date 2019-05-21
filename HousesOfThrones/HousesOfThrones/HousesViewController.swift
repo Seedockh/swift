@@ -26,6 +26,13 @@ class HousesViewController: UIViewController, UITableViewDataSource {
         return houseList.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if houseList[indexPath.row].logoURL=="" {
+            return 0
+        }
+        else { return 100 }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let houseCell = tableView.dequeueReusableCell(withIdentifier: "HouseCell",for:indexPath) as? HouseViewCell {
             houseCell.displayInfos(withHouse: houseList[indexPath.row])

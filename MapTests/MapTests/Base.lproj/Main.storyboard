@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Guh-bZ-vvC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iOP-y6-mCa">
+                                <rect key="frame" x="0.0" y="639" width="375" height="29"/>
+                                <segments>
+                                    <segment title="Europe"/>
+                                    <segment title="Afrique"/>
+                                    <segment title="Asie"/>
+                                    <segment title="Océanie"/>
+                                    <segment title="North Am."/>
+                                    <segment title="South Am."/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeRegionWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="EHy-0z-Fuw"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Guh-bZ-vvC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0zn-4o-fmb"/>
+                            <constraint firstItem="Guh-bZ-vvC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1rG-ue-slj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iOP-y6-mCa" secondAttribute="bottom" id="F7i-jx-ovA"/>
+                            <constraint firstItem="iOP-y6-mCa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GOe-J8-331"/>
+                            <constraint firstItem="Guh-bZ-vvC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="H7q-AQ-QgW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Guh-bZ-vvC" secondAttribute="trailing" id="Oc9-P2-XFW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iOP-y6-mCa" secondAttribute="trailing" id="eHW-9g-Ez3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Guh-bZ-vvC" secondAttribute="bottom" id="qTk-i5-J7H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Guh-bZ-vvC" id="Anu-Ls-xaB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

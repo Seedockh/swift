@@ -27,7 +27,8 @@ struct RequestManager {
     }
     
     static func getCharacters(houseName: String, success: @escaping(Data)->(),failure: @escaping(Error)->()) {
-        Alamofire.request("https://api.got.show/api/show/characters/byhouse/\"(houseName.addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)\"").responseData {
+        let name = houseName.addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)
+        Alamofire.request("https://api.got.show/api/show/characters/byhouse/\(name ?? "")").responseData {
             (dataResponse) in
             switch dataResponse.result {
             case .success(let value):

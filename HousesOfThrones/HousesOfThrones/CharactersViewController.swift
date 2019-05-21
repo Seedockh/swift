@@ -24,7 +24,8 @@ class CharactersViewController: UIViewController, UITableViewDataSource {
     func fetchCharacters() {
         RequestManager.getCharacters(houseName: houseName ?? "", success: { (data) in
             let decoder = JSONDecoder()
-            self.houseChars = try? decoder.decode([Character].self, from: data)
+            self.houseChars = (try? decoder.decode([Character].self, from: data)) ?? []
+            self.tableView.reloadData()
         }) { (error) in
             print(error)
         }
@@ -36,9 +37,17 @@ class CharactersViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let charCell = tableView.dequeueReusableCell(withIdentifier: "CharCell",for:indexPath) as? CharViewCell {
-            charCell.displayInfos(withHouse: houseChars[indexPath.row])
+            charCell.displayInfos(withChar: houseChars[indexPath.row])
             return charCell
         }
         return UITableViewCell()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailsSegue" {
+            if let detailsVC = segue.destination as? DetailsViewController, let indexPath = tableView.indexPathForSelectedRow {
+                detailsVC.character = houseChars[indexPath.row]
+            }
+        }
     }
 }
