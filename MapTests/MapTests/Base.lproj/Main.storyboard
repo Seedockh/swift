@@ -23,6 +23,7 @@
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iOP-y6-mCa">
                                 <rect key="frame" x="0.0" y="639" width="375" height="29"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <segments>
                                     <segment title="Europe"/>
                                     <segment title="Afrique"/>
@@ -35,17 +36,52 @@
                                     <action selector="changeRegionWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="EHy-0z-Fuw"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfr-9r-X5m">
+                                <rect key="frame" x="264" y="28" width="103" height="28"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Center User">
+                                            <attributes>
+                                                <color key="NSColor" red="0.1011054406326406" green="0.37603730153440507" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="centerOnUserLocation" destination="BYZ-38-t0r" eventType="touchUpInside" id="25v-nG-Bix"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qVQ-Z6-NP9">
+                                <rect key="frame" x="8" y="28" width="206" height="29"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="standard"/>
+                                    <segment title="satellite"/>
+                                    <segment title="hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeMapTypeWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ufs-Kv-BhC"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Guh-bZ-vvC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0zn-4o-fmb"/>
                             <constraint firstItem="Guh-bZ-vvC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1rG-ue-slj"/>
+                            <constraint firstItem="qVQ-Z6-NP9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Cvb-zY-3QA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iOP-y6-mCa" secondAttribute="bottom" id="F7i-jx-ovA"/>
+                            <constraint firstItem="qVQ-Z6-NP9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Fc0-cr-nC1"/>
                             <constraint firstItem="iOP-y6-mCa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GOe-J8-331"/>
                             <constraint firstItem="Guh-bZ-vvC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="H7q-AQ-QgW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Guh-bZ-vvC" secondAttribute="trailing" id="Oc9-P2-XFW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iOP-y6-mCa" secondAttribute="trailing" id="eHW-9g-Ez3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Guh-bZ-vvC" secondAttribute="bottom" id="qTk-i5-J7H"/>
+                            <constraint firstItem="hfr-9r-X5m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="rrn-Gd-Ngn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hfr-9r-X5m" secondAttribute="trailing" constant="8" id="xrx-mj-arV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

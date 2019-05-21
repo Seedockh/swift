@@ -9,6 +9,19 @@ class ViewController: UIViewController {
     @IBAction func changeRegion(sender: UISegmentedControl) {
         mapView.setRegion(regions[sender.selectedSegmentIndex], animated: true)
     }
+    @IBAction func centerOnUserLocation() {
+        mapView.setCenter(mapView.userLocation.coordinate, animated: true)
+    }
+    @IBAction func changeMapType(sender: UISegmentedControl) {
+        switch (sender.selectedSegmentIndex) {
+            case 0: mapView.mapType = .standard
+            case 1: mapView.mapType = .satellite
+            case 2: mapView.mapType = .hybrid
+            default: mapView.mapType = .standard
+        }
+    }
+    
+    var locationManager = CLLocationManager()
     
     let positions = [
         CLLocationCoordinate2D(latitude: 48.8566, longitude: 2.3522), //Paris
@@ -51,8 +64,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        placeMarkers(positions: positions)
+        //placeMarkers(positions: positions)
+        locationManager.requestAlwaysAuthorization()
+        //locationManager.requestWhenInUseAuthorization()
+        mapView.showsUserLocation = true
     }
 
-
+    /*
+     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let annotation = view.annotation as? MyAnnotation {
+            //Retains some datas here if necessart
+            performSeque(withIdentifier: "Segue_ID", sender: nil)
+        }
+     }
+     */
+    
+    
 }
